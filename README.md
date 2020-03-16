@@ -104,7 +104,7 @@ grammar Skyline;
 
 Dissenyeu una classe `Skyline` per a la gestió dels _skylines_. 
 
-Heu de tenir en compte que cap operació tingui un cost quadràtic.
+Mireu d'evitar que les operacions tinguin un cost quadràtic.
 
 ### Visitor
 
@@ -139,7 +139,7 @@ electrònic oficial de la facultat.
 #### Intèrpret 
 
 Feu un intèrpret que interactui amb l'usuari com a l'exemple mostrat a l'inici 
-del document.
+del document, mitjançant el `MessageHandler` del `python-telegram-bot`.
 
 
 ## Llibreries
