@@ -2,7 +2,7 @@
 
 El projecte SkylineBot per GEI-LP (edició primavera 2020).
 
-![skyline]('img/skyline.png')
+![skyline](img/skyline.png)
 
 L'_skyline_ d'una ciutat mostra una vista horizontal dels seus edificis.
 
