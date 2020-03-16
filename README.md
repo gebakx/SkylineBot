@@ -2,24 +2,14 @@
 
 El projecte SkylineBot per GEI-LP (edició primavera 2020).
 
-<center><img src='img/skyline.png' width='600'></center>
+![skyline]('img/skyline.png')
 
-<center>L'_skyline_ d'una ciutat mostra una vista horizontal dels seus edificis.</center>
-
-L'objectiu general de la pràctica consisteix en desenvolupar un chatbot intèrpret en 
-_telegram_ per a la manipulació d'_Skylines_.
-
-## Llenguatge
-=======
-<centerL'_skyline_ d'una ciutat mostra una vista horizontal dels seus edificis.</center>
+L'_skyline_ d'una ciutat mostra una vista horizontal dels seus edificis.
 
 L'objectiu general de la pràctica consisteix en desenvolupar un chatbot intèrpret en 
 _telegram_ per a la manipulació d'_Skylines_.
 
 ## Llenguatge
-
-A continuació teniu un petit exemple del que s'espera que faci el chatbot:
-![/start](img/exemple-0.png)
 
 Abans de començar a detallar el que s'espera anem a veure un exemple 
 d'interacció amb el nostre chatbot intèrpret.
