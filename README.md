@@ -6,8 +6,8 @@ El projecte SkylineBot per GEI-LP (edició primavera 2020).
 
 L'_skyline_ d'una ciutat mostra una vista horizontal dels seus edificis.
 
-L'objectiu general de la pràctica consisteix en desenvolupar un chatbot intèrpret en 
-_telegram_ per a la manipulació d'_Skylines_.
+L'objectiu general de la pràctica consisteix en desenvolupar un chatbot en 
+_telegram_ per a la manipulació d'_Skylines_ via un intèrpret.
 
 ## Llenguatge
 
@@ -16,20 +16,18 @@ d'interacció amb el nostre chatbot intèrpret.
 
 ### Exemple d'interacció
 
-A continuació teniu un petit exemple del que s'espera que faci el chatbot:
-
 ![/start](img/exemple-0.png)
 
 La comanda `/start` s'encarrega de fer totes les inicialitzacions pertinents i
-donar el missatge de benvinduda.
+donar el missatge de benvinguda.
 
 ![/author](img/exemple-1.png)
 
-La comanda `/author` ens dona la informació sobre l'autor del bot.
+La comanda `/author` ens dóna la informació sobre l'autor del bot.
 
 ![a := (1, 2, 3)](img/exemple-2.png)
 
-Amb l'expressió `(1, 2, 3)` estem creant un edifici que va desde la posició x 
+Amb l'expressió `(1, 2, 3)` estem creant un edifici que va desde la posició horitzontal 
 1 a la 3 i que té una alçada de 2. Amb l'operador `:=` estem assignant l'edifici
 a l'identificador `a`. De fet, estem creant una skyline amb un únic edifici.
 
@@ -61,9 +59,14 @@ d'inici i final a la coordenada horizontal i `alçada` l'alçada de l'edifici.
 Ex: `(1, 2, 3)`
   - Compostos: `[(xmin, alçada, xmax)]` permet definir diversos edificis 
 mitjançant una llista d'edificis simples. Ex: `[(1, 2, 3), (3, 4, 6)]`
+  - Aleatoris: `{n, h, w, xmin, xmax}` construeix `n` edificis,
+  cadascun d'ells amb una alçada aleatòria entre 0 i `h`,
+  amb una amplada aleatòria entre 1 i `w`,
+  i una posició d'inici i de final aleatòria entre `xmin` i `xmax`.
+  
 
 En la creació d'edificis s'ha de control·lar que `xmax` sigui més gran que 
-`xmin` i que no posem edificis en valors de `x` negatius.
+`xmin` i que no es posin edificis amb alçades negatives.
 
 - Operadors d'skylines:
   - `skyline + skyline`: unió
@@ -84,11 +87,18 @@ La taula següent mostra la prioritat d'operadors de més gran a més petita:
 `+` `-` | unió i desplaçaments
 
 El llenguatge admet l'ús d'*identificadors* i l'*assignació* mitjançant l'operador
-`:=`.
+`:=`. Els identificadors han de una lletra seguida de zero o més lletres o dígits.
 
 ## Tasques
 
 La vostra pràctica ha de contenir els components que es detallen a continuació.
+
+### Classe Skyline
+
+Dissenyeu una classe `Skyline` per a la gestió dels _skylines_. 
+
+Cap operació pot tenir un cost quadràtic amb el nombre d'edificis.
+
 
 ### Gramàtica
 
@@ -100,11 +110,6 @@ grammar Skyline;
 ...
 ```
 
-### Classe Skyline
-
-Dissenyeu una classe `Skyline` per a la gestió dels _skylines_. 
-
-Mireu d'evitar que les operacions tinguin un cost quadràtic.
 
 ### Visitor
 
@@ -120,7 +125,8 @@ La vostra tasca consisteix en implementar un Bot de Telegram que interactui
 textualment i gràficament amb els components que es detallen a continuació.
 
 Noteu que les dades han de ser guardades per a cada usuari. El bot ha de
-funcionar amb diversos usuaris treballant al mateix temps.
+funcionar amb diversos usuaris treballant al mateix temps amb dades independents
+entre ells.
 
 #### Comandes del bot
 
