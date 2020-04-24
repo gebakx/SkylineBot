@@ -57,7 +57,7 @@ El llenguatge permet els tipus d'operacions següents:
   - Simple: `(xmin, alçada, xmax)` on `xmin` i `xmax` especifiquen la posició
 d'inici i final a la coordenada horizontal i `alçada` l'alçada de l'edifici.
 Ex: `(1, 2, 3)`.
-  - Compostos: `[(xmin, alçada, xmax)]` permet definir diversos edificis
+  - Compostos: `[(xmin, alçada, xmax), ...]` permet definir diversos edificis
 mitjançant una llista d'edificis simples. Ex: `[(1, 2, 3), (3, 4, 6)]`.
   - Aleatoris: `{n, h, w, xmin, xmax}` construeix `n` edificis,
   cadascun d'ells amb una alçada aleatòria entre 0 i `h`,
@@ -65,7 +65,7 @@ mitjançant una llista d'edificis simples. Ex: `[(1, 2, 3), (3, 4, 6)]`.
   i una posició d'inici i de final aleatòria entre `xmin` i `xmax`.
 
 
-En la creació d'edificis s'ha de control·lar que `xmax` sigui més gran que
+En la creació d'edificis ha de controlar que `xmax` sigui més gran que
 `xmin` i que no es donin edificis amb alçades negatives.
 
 - Operadors d'skylines:
@@ -86,7 +86,7 @@ La taula següent mostra la prioritat d'operadors de més gran a més petita:
 `*` | intersecció i replicació
 `+` `-` | unió i desplaçaments
 
-El llenguatge admet l'ús d'*identificadors* i l'*assignació* mitjançant l'operador
+El llenguatge admet l'ús d'*identificadors* i d'*assignacions* mitjançant l'operador
 `:=`. Els identificadors han de ser una lletra seguida de zero o més lletres o dígits.
 
 ## Tasques
@@ -152,7 +152,9 @@ del document, mitjançant el `MessageHandler` del `python-telegram-bot`.
 Utilitzeu les llibreries de Python següents:
 
 - `matplotlib` per graficar dades,
+
 - `pickle` per guardar i carregar estructures de dades en binari, i
+
 - `python-telegram-bot` per interactuar amb Telegram.
 
 Podeu utilitzar lliurament les llibreries estàndard de Python, però si no
@@ -161,25 +163,29 @@ us el donaran).
 
 ## Referències
 
-- Matplotlib. The Matplotlib development team, 2018.
-https://matplotlib.org/
-- pickle — Python object serialization. Python Software Foundation, 2019.
-https://docs.python.org/3.6/library/pickle.html
-- Bots de Telegram. Jordi Petit, 2019.
-https://lliçons.jutge.org/python/telegram.html
+- [Matplotlib](https://matplotlib.org/º). The Matplotlib development team, 2018.
+
+- [pickle](https://docs.python.org/3.6/library/pickle.html) — Python object serialization. Python Software Foundation, 2019.
+
+- [Bots de Telegram](https://lliçons.jutge.org/python/telegram.html). Jordi Petit, 2019.
+
 
 ## Lliurament
 
 Heu de lliurar la vostra pràctica al Racó. Només heu de lliurar un fitxer ZIP
 que, al descomprimir-se generi:
-- un fitxer `requirements.txt` amb les llibreries que utilitza el vostre projecte
-  - vegeu, per exemple, https://pip.pypa.io/en/stable/user_guide/#requirements-files.
+
+- un fitxer `requirements.txt` amb les llibreries que utilitza el vostre projecte (vegeu, per exemple, https://pip.pypa.io/en/stable/user_guide/#requirements-files),
+
 - un fitxer `README.md` que el documenti
-  - vegeu, per exemple, https://gist.github.com/PurpleBooth/109311bb0361f32d87a2.
-- una carpeta `cl` amb el contingut de la part de compiladors
-  - els arxius principals s'han de dir `test.*.py`
-- un arxiu `bot.py` amb la part del chatbot
-- un arxiu `Skyline.py` amb la classe Skyline
+  (vegeu, per exemple, https://gist.github.com/PurpleBooth/109311bb0361f32d87a2),
+
+- una carpeta `cl` amb el contingut de la part de compiladors (els arxius principals s'han de dir `test.*.py`),
+
+- un arxiu `bot.py` amb la part del chatbot,
+
+- un arxiu `skyline.py` amb la classe Skyline,
+
 - un arxiu `document.pdf|png|jpeg` amb el [Compromís d'integritat acadèmica de la UPC](https://www.upc.edu/ca/sala-de-premsa/pdfs/compromis_integritat_academica-final.pdf) signat.
 
 Els vostres fitxers de codi en Python han de seguir les regles d'estı́l PEP8,
@@ -188,4 +194,4 @@ Podeu utilitzar el paquet pep8 o http://pep8online.com/ per assegurar-vos
 que seguiu aquestes regles d'estı́l. L'ús de tabuladors en el codi queda prohibit
 (zero directe).
 
-El termini de lliurament és el dilluns 8 de juny a les 23:59.
+El termini de lliurament és el **dilluns 8 de juny a les 23:59 CEST**.
