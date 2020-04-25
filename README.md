@@ -97,18 +97,7 @@ La vostra pràctica ha de contenir els components que es detallen a continuació
 
 Dissenyeu una classe `Skyline` per a la gestió dels _skylines_.
 
-Cap operació pot tenir un cost quadràtic amb el nombre d'edificis. La taula següent mostra
-un límit superior de temps que no haurien de sobrepassar els vostres sistemes en la 
-generació de _skylines_ aleatòris:
-
-*configuració* | *límit temps*
---- | ---
-`{1000,20,3,1,10000}` | 2s
-`{10000,20,3,1,10000}` | 2m
-`{100000,20,3,1,10000}` | 30m
-
-Aquests nombres s'han generat utilitzant directament la classe _Skyline_. És a dir, sense
-fer-ho a través del bot de telegram.
+Cap operació pot tenir un cost quadràtic amb el nombre d'edificis. Per exemple, una configuració `{100000,20,3,1,10000}` no hauria de trigar més de 30 segons. 
 
 ### Gramàtica
 
