@@ -58,7 +58,8 @@ El llenguatge permet els tipus d'operacions següents:
 d'inici i final a la coordenada horizontal i `alçada` l'alçada de l'edifici.
 Ex: `(1, 2, 3)`.
   - Compostos: `[(xmin, alçada, xmax), ...]` permet definir diversos edificis
-mitjançant una llista d'edificis simples. Ex: `[(1, 2, 3), (3, 4, 6)]`.
+mitjançant una llista d'edificis simples. Ex: `[(1, 2, 3), (3, 4, 6)]` o 
+`[(1, 1, 2), (1000000000000, 1, 1000000000001)]`.
   - Aleatoris: `{n, h, w, xmin, xmax}` construeix `n` edificis,
   cadascun d'ells amb una alçada aleatòria entre 0 i `h`,
   amb una amplada aleatòria entre 1 i `w`,
